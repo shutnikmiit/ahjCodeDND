@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 50px;
+  width: 100%;
+  height: 100%;
+  background: #908f8c;
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+  font-size: medium;
+  margin: 0px auto;
+}
+
+.board {
+  width: 1000px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.column {
+  width: 300px;
+  background-color: #ffffffa2;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.column:nth-child(2n) {
+  margin: 0px 50px;
+}
+
+.column__header {
+  text-transform: uppercase;
+}
+
+.tasks-list {
+  min-height: 50px;
+  padding: 20px;
+}
+
+.task {
+  list-style: none;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px 0 #0000003d;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.dragged {
+  list-style: none;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px 0 #0000003d;
+  cursor: grabbing;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 999;
+  opacity: 50%;
+  transform: rotate(10deg);
+}
+
+.column__add {
+  cursor: pointer;
+  align-items: center;
+}
+
+.add-form__textarea {
+  resize: vertical;
+  width: 276px;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px 0 #0000003d;
+}
+
+.add-form__form-control {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add-form__button {
+  display: block;
+  width: 100px;
+  height: 40px;
+  font-size: medium;
+  padding: 0px, 10px;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.add-form__submit-button {
+  background-color: #18d43de1;
+}
+
+.add-form__close-button {
+  background-color: #db7f6ae1;
+}
+
+.error-empty {
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #db7f6ae1;
+}
+
+.close {
+  position: absolute;
+  z-index: 9999;
+  display: block;
+  border-radius: 5px;
+  width: 17px;
+  height: 17px;
+  background-color: #ececec9b;
+  color: #353738;
+  cursor: pointer;
+}
+
+.close::after {
+  content: '✕';
+}
+
+.task-list__new-place {
+  background-color: #6cbc8b;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+}
+
+.add-form__textarea {
+  font-size: large;
+}
+
